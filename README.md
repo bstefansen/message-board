@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# Message-board
+
+:fire: **Currently converting off of glitch and building custom front-end** :fire:
+
+A web app that lets users post and reply to threads on a message board
+
+<a href='https://glitch.com/~stefansen-stock-checker' target="_blank">Link</a>
+>>>>>>> f5b55ce5a4aca49060a621fbc283ec7a24e8a6a5
