@@ -1,6 +1,8 @@
 {
   "name": "message-board",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "description": "A message-board web application using the MERN stack",
+  //"main": "server.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -8,14 +10,40 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "express": "^4.14.0",
+		"cors": "^2.8.1",
+		"body-parser": "^1.15.2",
+		"chai": "^3.5.0",
+		"mongodb": "^2.2.16",
+		"chai-http": "^3.0.0",
+		"mocha": "^3.2.0",
+		"zombie": "^5.0.5",
+		"helmet": "^3.1.0",
+    "mongoose": "*"
   },
+  /*
+  "engines": {
+    "node": "4.4.3"
+  },
+  */
   "scripts": {
+    //"start": "node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/bstefansen/message-board.git"
+	},
+	"keywords": [
+		"node",
+		"hyperdev",
+		"express"
+	],
+  "license": "MIT",
   "eslintConfig": {
     "extends": "react-app"
   },
