@@ -11,6 +11,7 @@
 var expect = require("chai").expect;
 var express = require("express");
 var mongoose = require("mongoose");
+require('dotenv').config();
 
 let thread = require("../models/thread.js").thread;
 let reply = require("../models/reply.js").reply;

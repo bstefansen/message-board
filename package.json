@@ -1,56 +1,21 @@
 {
-  "name": "message-board",
-  "version": "0.0.1",
-  "description": "A message-board web application using the MERN stack",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "body-parser": "^1.15.2",
-    "chai": "^3.5.0",
-    "chai-http": "^3.0.0",
-    "cors": "^2.8.1",
-    "dotenv": "^8.2.0",
-    "express": "^4.14.0",
-    "helmet": "^3.1.0",
-    "mocha": "^3.2.0",
-    "mongodb": "^2.2.16",
-    "mongoose": "*",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "zombie": "^5.0.5"
-  },
+  "name": "example-create-react-app-express",
+  "version": "1.0.0",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bstefansen/message-board.git"
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "helmet": "^3.22.0",
+    "yarn": "^1.22.4"
   },
-  "keywords": [
-    "node",
-    "hyperdev",
-    "express"
-  ],
-  "license": "MIT",
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "concurrently": "^4.0.1"
   }
 }

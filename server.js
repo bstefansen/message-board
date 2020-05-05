@@ -6,7 +6,7 @@ var expect      = require('chai').expect;
 var cors        = require('cors');
 var helmet      = require('helmet');
 
-var apiRoutes         = require('./routes/api.js');
+var apiRoutes   = require('./client/routes/api.js');
 
 var app = express();
 
@@ -24,17 +24,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Sample front-end
 app.route('/b/:board/')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + '/views/board.html');
+    res.sendFile(process.cwd() + './client/public/board.html');
   });
 app.route('/b/:board/:threadid')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + '/views/thread.html');
+    res.sendFile(process.cwd() + './client/public/thread.html');
   });
 
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + '/views/index.html');
+    res.sendFile(process.cwd() + './client/public/index.html');
   });
 
 //Routing for API 
