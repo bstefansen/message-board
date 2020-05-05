@@ -4,7 +4,16 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Test</h1>
+      <h1>MERN | Message Board</h1>
+
+      <div className="main">
+        <h3>Search for a message board</h3> <br />
+        <input className="input" placeholder="/b/general"/>
+        <br /><br />
+        <a href="board.html" >Board</a>
+        <br /><br />
+        <a href="thread.html" >Thread</a>
+      </div>
     </div>
   );
 }
