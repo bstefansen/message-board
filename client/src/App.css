@@ -21,3 +21,10 @@ h1 {
   width: 20%;
   padding: 0.5em;
 }
+
+.button {
+  font-size: large;
+  margin: "1em";
+  width: 5%;
+  padding: 0.5em;
+}
