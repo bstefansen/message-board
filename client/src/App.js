@@ -18,7 +18,7 @@ class App extends Component {
 
   callApi = async () => {
     const response = await fetch('/b/general/');
-    const body = await response.json();
+    const body = await response;
 
     if (response.status !== 200) throw Error(body.message);
 
@@ -27,9 +27,10 @@ class App extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+
     const response =
       await axios.get("/b/general/")
-    return response
+    console.log(response);
   };
   
 
