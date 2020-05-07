@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 
 class App extends Component {
   state = {
@@ -26,16 +27,9 @@ class App extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    const response = await fetch('/b/general/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ post: this.state.post }),
-    });
-    const body = await response.text();
-
-    this.setState({ responseToPost: body });
+    const response =
+      await axios.get("/b/general/")
+    return response
   };
   
 
@@ -46,10 +40,11 @@ class App extends Component {
 
         <div className="main">
           <h3>Search for a message board</h3> <br />
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <input
               className="input"
-              placeholder="/b/general"
+              placeholder="/b/general/"
+              type="text"
               value={this.state.post}
               onChange={e => this.setState({ post: e.target.value })}
               />
