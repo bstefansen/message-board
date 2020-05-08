@@ -1,6 +1,7 @@
 {
   "name": "message-board-server",
   "version": "0.0.1",
+  "proxy": "http://localhost:3000/",
   "description": "A message-board web application using the MERN stack",
   "scripts": {
     "client": "cd client && yarn start",
@@ -15,6 +16,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
     "helmet": "^3.22.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
     "yarn": "^1.22.4"
   },
   "devDependencies": {
