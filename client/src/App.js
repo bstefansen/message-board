@@ -5,12 +5,10 @@ class App extends Component {
   state = {
     get: ''
   };
-
-  // TODO: get input to redirect to /b/general/
-
+  
   handleSubmit = e => {
     e.preventDefault();
-    window.location.assign("http://localhost:5000" + this.state.get)
+    window.location.assign(window.location.protocol + "//" + window.location.hostname + ":5000" + this.state.get)
   };
 
   render() {
@@ -18,7 +16,7 @@ class App extends Component {
       <div className="App">
         <h1>MERN | Message Board</h1>
 
-        <div className="main">
+        <div className="main" onload={this.setHref}>
           <h3>Search for a message board</h3> <br />
           <form onSubmit={this.handleSubmit}>
             <input
@@ -30,12 +28,11 @@ class App extends Component {
               />
             <button className="button" type="submit">Submit</button>
           </form>
-          <br /><br />
-          <a href="http://localhost:5000/b/general/">Board</a>
-          <br /><br />
-          <a href="http://localhost:5000/b/general/5eb33ead42a9c11a280ca34a" >Thread</a>
-          <br /><br />
         </div>
+
+        <footer>
+          <a href="https://bstefansen.github.io/Portfolio/" target="_blank" style={{textDecoration: "none"}}>© 2020, Blake Stefansen</a>
+        </footer>
       </div>
     );
   }

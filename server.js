@@ -5,6 +5,7 @@ var bodyParser  = require('body-parser');
 var expect      = require('chai').expect;
 var cors        = require('cors');
 var helmet      = require('helmet');
+require('dotenv').config();
 
 var apiRoutes   = require('./client/routes/api.js');
 
