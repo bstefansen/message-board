@@ -5,17 +5,20 @@ var bodyParser  = require('body-parser');
 var expect      = require('chai').expect;
 var cors        = require('cors');
 var helmet      = require('helmet');
+var path        = require('path')
 require('dotenv').config();
 
 var apiRoutes   = require('./client/routes/api.js');
 
 var app = express();
 
+app.use(helmet.xssFilter());
 app.use(helmet.frameguard({action: 'sameorigin'}));
 app.use(helmet.dnsPrefetchControl());
 app.use(helmet.referrerPolicy({ policy: 'same-origin'}));
 
-app.use('/public', express.static(process.cwd() + '/public'));
+// get style.css served to board.html
+//app.use('/public', express.static(process.cwd() + '/public'));
 
 app.use(cors({origin: '*'})); //For FCC testing purposes only
 
@@ -35,7 +38,7 @@ app.route('/b/:board/:threadid')
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + '/client/public/index.html');
+    res.sendFile(process.cwd() + '/client/views/index.html');
   });
 
 //Routing for API 
