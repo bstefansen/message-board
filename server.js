@@ -18,7 +18,7 @@ app.use(helmet.dnsPrefetchControl());
 app.use(helmet.referrerPolicy({ policy: 'same-origin'}));
 
 // get style.css served to board.html
-//app.use('/public', express.static(process.cwd() + '/public'));
+app.use(express.static(process.cwd() + '/public'));
 
 app.use(cors({origin: '*'})); //For FCC testing purposes only
 
@@ -26,6 +26,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Sample front-end
+app.get('/css', (req, res) => {
+  res.sendFile(process.cwd() + '/client/public/style.css')
+})
 app.route('/b/:board/')
   .get(function (req, res) {
     res.sendFile(process.cwd() + '/client/public/board.html');

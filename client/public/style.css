@@ -1,12 +1,12 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  
+}
+
 body {
   padding: 10px;
 }
-
-/*  TODO: Get css to talk to board.html | app.use on server.js */
-h1 {
-  color: red;
-}
-/*  TODO: Get css to talk to board.html  */
 
 .replies {
   margin-left: 50px;
