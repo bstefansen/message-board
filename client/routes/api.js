@@ -11,15 +11,15 @@
 var expect = require("chai").expect;
 var express = require("express");
 var mongoose = require("mongoose");
-require('dotenv').config();
+require('dotenv').config({ path: '.env' });
 
 let thread = require("../models/thread.js").thread;
 let reply = require("../models/reply.js").reply;
-/*
+
 const CONNECTION_STRING = process.env.MONGO_DB; //MongoClient.connect(CONNECTION_STRING, function(err, db) {});
 
 mongoose.connect(CONNECTION_STRING, { useNewUrlParser: true });
-*/
+
 module.exports = function(app) {
   app
     .route("/api/threads/:board")
