@@ -41,7 +41,7 @@ app.route('/b/:board/:threadid')
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + '/client/views/index.html');
+    res.sendFile(process.cwd() + '/client/public/index.html');
   });
 
 //Routing for API 
