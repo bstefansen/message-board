@@ -47,7 +47,7 @@ app.route('/')
 //Routing for API 
 apiRoutes(app);
 
-//Sample Front-end
+//Sample Front end
 
     
 //404 Not Found Middleware
