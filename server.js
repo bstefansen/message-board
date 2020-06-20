@@ -70,11 +70,12 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+/*
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
     res.sendFile(process.cwd() + '/client/build/index.html');
   });
-
+*/
 
 module.exports = app; //for testing
