@@ -27,21 +27,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Sample front-end
 app.get('/css', (req, res) => {
-  res.sendFile(process.cwd() + '/client/public/style.css')
+  res.sendFile(process.cwd() + '/client/build/style.css')
 })
 app.route('/b/:board/')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + '/client/public/board.html');
+    res.sendFile(process.cwd() + '/client/build/board.html');
   });
 app.route('/b/:board/:threadid')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + '/client/public/thread.html');
+    res.sendFile(process.cwd() + '/client/build/thread.html');
   });
 
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
     res.sendFile(process.cwd() + '/client/build/index.html');
+    // serve client build
   });
 
 //Routing for API 
