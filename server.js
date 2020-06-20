@@ -38,14 +38,14 @@ app.route('/b/:board/:threadid')
     res.sendFile(process.cwd() + '/client/build/thread.html');
   });
 
-/*  
+ 
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
     res.sendFile(process.cwd() + '/client/build/index.html');
     // serve client build
   });
-*/
+
 
 //Routing for API 
 apiRoutes(app);
@@ -81,12 +81,12 @@ if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static('client/build'));
    
-  /*
+  
   // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
     res.sendFile('client/build', 'index.html');
   });
-  */
+  
 }
 
 
