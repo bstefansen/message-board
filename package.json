@@ -4,7 +4,7 @@
   "proxy": "http://localhost:3000/",
   "description": "A message-board web application using the MERN stack",
   "scripts": {
-    "client": "cd client && serve -s build -l 3000",
+    "client": "cd client && npm run build && serve -s build",
     "server": "node server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
