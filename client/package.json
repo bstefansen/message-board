@@ -2,7 +2,7 @@
   "name": "message-board-client",
   "version": "0.0.1",
   "description": "A message-board web application using the MERN stack",
-  "homepage": ".",
+  "homepage": "/",
   "private": true,
   "proxy": "http://localhost:5000/",
   "dependencies": {
