@@ -5,7 +5,7 @@
   "description": "A message-board web application using the MERN stack",
   "scripts": {
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "client": "cd client && serve -s build -l 3000",
+    "client": "cd client && serve -s build -l 56317",
     "server": "node server.js",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
