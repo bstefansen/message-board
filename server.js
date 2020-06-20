@@ -38,14 +38,14 @@ app.route('/b/:board/:threadid')
     res.sendFile(process.cwd() + '/client/build/thread.html');
   });
 
- 
+ /*
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
     res.sendFile(process.cwd() + '/client/build/index.html');
     // serve client build
   });
-
+*/
 
 //Routing for API 
 apiRoutes(app);
