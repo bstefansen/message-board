@@ -38,14 +38,8 @@ app.route('/b/:board/:threadid')
     res.sendFile(process.cwd() + '/client/build/thread.html');
   });
 
- /*
-//Index page (static HTML)
-app.route('/')
-  .get(function (req, res) {
-    res.sendFile(process.cwd() + '/client/build/index.html');
-    // serve client build
-  });
-*/
+ 
+
 
 //Routing for API 
 apiRoutes(app);
@@ -63,18 +57,6 @@ app.use(function(req, res, next) {
 //Start our server and tests!
 app.listen(process.env.PORT || 5000, function () {
   console.log("Listening on port " + process.env.PORT);
-  if(process.env.NODE_ENV==='test') {
-    console.log('Running Tests...');
-    setTimeout(function () {
-      try {
-        runner.run();
-      } catch(e) {
-        var error = e;
-          console.log('Tests are not valid:');
-          console.log(error);
-      }
-    }, 1500);
-  }
 });
 
 if (process.env.NODE_ENV === 'production') {
@@ -83,11 +65,16 @@ if (process.env.NODE_ENV === 'production') {
    
   
   // Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   });
-  
 }
+
+//Index page (static HTML)
+app.route('/')
+  .get(function (req, res) {
+    res.sendFile(process.cwd() + '/client/build/index.html');
+  });
 
 
 module.exports = app; //for testing
