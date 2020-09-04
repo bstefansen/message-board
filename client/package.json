@@ -17,7 +17,7 @@
     "express": "^4.14.0",
     "helmet": "^3.1.0",
     "mocha": "^3.2.0",
-    "mongodb": "^2.2.16",
+    "mongodb": "^3.1.13",
     "mongoose": "*",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
